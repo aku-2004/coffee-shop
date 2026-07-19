@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Doaba Coffee House, Chandigarh</title>
+<meta name="description" content="Get in touch with Doaba Coffee House in Sector 17-D, Chandigarh. Phone, email, address and a contact form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">Doaba <span>Coffee</span> House</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#" class="nav-cta-mobile">Order Online</a></li>
+    </ul>
+    <a href="#" class="nav-cta">Order Online</a>
+  </nav>
+</header>
+
+<div class="page-banner">
+  <span class="section-label script" style="color:#e0a458;">get in touch</span>
+  <h1>Contact Us</h1>
+  <p>Questions, feedback, or want to book the space for a small event? Reach out.</p>
+</div>
+
+<section>
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <h2>Find Us</h2>
+      <p><strong>Address:</strong><br>Shop No. 12, Sector 17-D, Chandigarh, 160017</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Email:</strong> hello@doabacoffeehouse.in</p>
+      <p><strong>Hours:</strong> Mon – Sun, 8:00 AM – 9:00 PM</p>
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps?q=Sector+17,+Chandigarh&output=embed" loading="lazy" allowfullscreen title="Map to Doaba Coffee House"></iframe>
+      </div>
+    </div>
+    <div>
+      <h2>Send Us A Message</h2>
+      <form class="contact-form" id="contactForm">
+        <label for="cName">Name</label>
+        <input type="text" id="cName" required>
+        <label for="cEmail">Email</label>
+        <input type="email" id="cEmail" required>
+        <label for="cMsg">Message</label>
+        <textarea id="cMsg" required></textarea>
+        <button type="submit">Send Message</button>
+        <p class="contact-msg" id="contactMsg">Thanks, we'll get back to you!</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-col">
+      <h4>Doaba Coffee House</h4>
+      <p>Shop No. 12, Sector 17-D<br>Chandigarh, 160017</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <p>Mon – Sun<br>8:00 AM – 9:00 PM</p>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Along</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="copyright">&copy; 2026 Doaba Coffee House. All rights reserved.</p>
+</footer>
+<script>
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const navLinks = document.getElementById('navLinks');
+  hamburgerBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('contactMsg').style.display = 'block';
+    contactForm.reset();
+  });
+</script>
+</body>
+</html>
